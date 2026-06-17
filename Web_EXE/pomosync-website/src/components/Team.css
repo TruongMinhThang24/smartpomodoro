@@ -1,0 +1,107 @@
+.team {
+  background: var(--black);
+}
+.team__header {
+  margin-bottom: 64px;
+}
+.team__title {
+  color: var(--text-primary);
+  margin: 16px 0 20px;
+}
+.team__sub {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.member-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.6s ease both;
+  position: relative;
+  overflow: hidden;
+}
+/* Top glow line */
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.member-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-lit);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(0,212,255,0.05);
+}
+.member-card:hover::before {
+  opacity: 1;
+}
+
+.member-card__avatar {
+  width: 96px; height: 96px;
+  object-fit: cover;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.member-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.member-card__name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.member-card__role {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+.member-card__bio {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.member-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  margin-top: 4px;
+  align-self: center;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.member-card__linkedin:hover { color: var(--cyan); }
+
+@media (max-width: 900px) { .team__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .team__grid { grid-template-columns: 1fr; } }

@@ -4,6 +4,7 @@ import thangImg from '../assets/THANG.jpg'
 import tranImg from '../assets/TRAN.jpg'
 import trieuvyImg from '../assets/TRIEUVY.jpg'
 import baoImg from '../assets/BAO.jpg'
+import Manocanh from '../assets/Manocanh.jpg'
 
 const team = [
   {
@@ -20,7 +21,7 @@ const team = [
   },
   {
     name: 'Nguyễn Thị Huỳnh Như',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=faces',
+    avatar: Manocanh,
   },
   {
     name: 'Trương Minh Thắng',

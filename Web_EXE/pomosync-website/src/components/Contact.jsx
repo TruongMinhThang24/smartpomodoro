@@ -31,7 +31,7 @@ export default function Contact() {
                 <span className="contact__channel-icon">✉️</span>
                 <div>
                   <div className="contact__channel-label">Email</div>
-                  <div className="contact__channel-value">hello@smartpomodoro.vn</div>
+                  <div className="contact__channel-value">support_smsp@smartclock.id.vn</div>
                 </div>
               </a>
               <a href="https://www.facebook.com/share/1BKpFDM9oK/?mibextid=wwXIfr" target="_blank" rel="noopener" className="contact__channel">

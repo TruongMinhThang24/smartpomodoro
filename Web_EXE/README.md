@@ -1,2 +1,2 @@
 # smartpomodoro
-smartpomodoro
+smartpomodoro_version2

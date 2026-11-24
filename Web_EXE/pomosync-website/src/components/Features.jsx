@@ -3,39 +3,51 @@ import './Features.css'
 const features = [
   {
     icon: '⏱️',
-    title: 'Hệ thống Pomodoro',
-    desc: 'Tích hợp đồng hồ Pomodoro thông minh với 4 núm điều chỉnh thời gian làm việc, nghỉ ngơi và số phiên.',
-    tag: 'Core Feature',
+    title: 'Pomodoro AI Đồng Bộ',
+    desc: 'Quản lý chu kỳ làm việc & nghỉ ngơi khoa học, đồng bộ đếm ngược tức thời giữa đồng hồ ESP32 và App qua Bluetooth SPP.',
+    tag: 'ESP32 & App Sync',
   },
   {
-    icon: '🖥️',
-    title: 'Màn hình TFT LCD',
-    desc: 'Hiển thị đồng hồ, lịch tuần (MON-SUN), pin 85%, ngày tháng và thời tiết real-time ngay trên mặt thiết bị.',
-    tag: 'Smart Display',
+    icon: '🎵',
+    title: 'Loa Bluetooth A2DP Kép',
+    desc: 'Vừa truyền dữ liệu học tập vừa stream nhạc Lo-Fi, White Noise chất lượng cao qua module giải mã âm thanh I2S DAC.',
+    tag: 'Dual-Mode Audio',
   },
   {
-    icon: '🔊',
-    title: 'Loa đôi 2 kênh',
-    desc: 'Hai driver tròn full-range với lưới kim loại và thiết kế dot pattern cho âm thanh rõ ràng, cân bằng.',
-    tag: 'Dual Speaker',
+    icon: '🧠',
+    title: 'Trợ Lý Ảo AI Coach (Gemini)',
+    desc: 'Phân tích dữ liệu học tập cá nhân, đo lường nguy cơ kiệt sức (Burnout BRIX) và đưa ra chiến lược nâng cao hiệu suất.',
+    tag: 'Gemini 2.5 LLM',
   },
   {
-    icon: '🎛️',
-    title: '4 Núm Rotary Encoder',
-    desc: 'Bốn núm vặn vật lý trên đỉnh: điều chỉnh âm lượng, thời gian Pomodoro, mode và độ sáng màn hình.',
-    tag: 'Physical Controls',
+    icon: '🏆',
+    title: 'Thi Đua Năng Suất Nhóm',
+    desc: 'Tạo phòng thi đua 2 - 5 người bạn bằng mã code 6 số. Bảng xếp hạng thời gian thực với điểm PRS minh bạch chống gian lận.',
+    tag: 'PRS Competition',
   },
   {
-    icon: '🔴',
-    title: 'LED Trạng thái',
-    desc: 'Đèn LED đỏ tích hợp trên khe tản nhiệt hiển thị trạng thái: đang chạy, nghỉ, sạc pin nhanh chóng.',
-    tag: 'Status LED',
+    icon: '📵',
+    title: 'Kỷ Luật Số (Digital Wellbeing)',
+    desc: 'Tự động đếm số lần mở khóa điện thoại (Unlock Count) trong giờ học để triệt tiêu xao nhãng và tạo thói quen kỷ luật.',
+    tag: 'Anti-Distraction',
   },
   {
-    icon: '🔌',
-    title: 'USB-C & Pin nội',
-    desc: 'Sạc nhanh qua cổng USB-C. Pin lithium tích hợp dùng được 12+ giờ, không cần cắm điện liên tục.',
-    tag: 'USB-C Fast Charge',
+    icon: '📅',
+    title: 'Thời Khóa Biểu Tuần',
+    desc: 'Lập lịch trình học tập từ Thứ 2 đến Chủ Nhật, tự động nhắc nhở và kích hoạt màn hình đồng hồ kèm chuông báo.',
+    tag: 'Weekly Schedule',
+  },
+  {
+    icon: '🕰️',
+    title: 'Chip RTC DS3231 Độc Lập',
+    desc: 'Chip thời gian thực chuyên dụng tích hợp pin nuôi riêng, giữ giờ chuẩn xác 100% kể cả khi ngắt nguồn hoặc không có Wi-Fi.',
+    tag: 'High Precision RTC',
+  },
+  {
+    icon: '🔄',
+    title: 'Cập Nhật Không Dây OTA',
+    desc: 'Dễ dàng nâng cấp Firmware đồng hồ và đồng bộ các thiết lập hệ thống từ xa thông qua ứng dụng di động.',
+    tag: 'Wireless OTA Update',
   },
 ]
 
@@ -44,13 +56,13 @@ export default function Features() {
     <section id="features" className="section features">
       <div className="container">
         <header className="features__header text-center">
-          <p className="eyebrow">Tính Năng</p>
+          <p className="eyebrow">TÍNH NĂNG VƯỢT TRỘI</p>
           <h2 className="display-md features__title">
-            Mọi thứ bạn cần.<br />Trong một thiết bị.
+            Công Nghệ Thông Minh.<br />Kỷ Luật Khoa Học.
           </h2>
           <p className="body-lg features__sub">
-            Smart Pomodoro kết hợp loa, đồng hồ, lịch và timer Pomodoro — 
-            thiết kế mở cho maker, tối ưu cho người dùng.
+            Hệ sinh thái <strong>Smart Pomodoro</strong> trang bị đầy đủ công cụ từ phần cứng đến phần mềm
+            giúp bạn làm chủ thời gian và bứt phá kết quả học tập, công việc.
           </p>
         </header>
 
@@ -59,7 +71,7 @@ export default function Features() {
             <article
               key={i}
               className="feat-card"
-              style={{ animationDelay: `${i * 0.08}s` }}
+              style={{ animationDelay: `${i * 0.06}s` }}
             >
               <div className="feat-card__icon">{f.icon}</div>
               <span className="feat-card__tag">{f.tag}</span>

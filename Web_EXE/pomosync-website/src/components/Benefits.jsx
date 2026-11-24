@@ -1,26 +1,26 @@
 import './Benefits.css'
-import productLifestyle from '../assets/product_lifestyle.png'
+import smartclockAiLifestyle from '../assets/smartclock_ai_lifestyle.jpg'
 
 const benefits = [
   {
     num: '01',
-    title: 'Năng suất cao hơn 40%',
-    desc: 'Kỹ thuật Pomodoro đã được khoa học chứng minh. Smart Pomodoro biến phương pháp này thành thói quen tự nhiên với timer vật lý dễ dùng.',
+    title: 'Bứt phá năng suất với Pomodoro & PRS',
+    desc: 'Kỹ thuật Pomodoro kết hợp hệ thống điểm thi đua PRS (Productivity Ranking Score) kích thích động lực học tập liên tục mỗi ngày.',
   },
   {
     num: '02',
-    title: 'Không cần nhìn điện thoại',
-    desc: 'Màn hình TFT hiển thị đủ: giờ, lịch, thời tiết, pin. Giảm phụ thuộc điện thoại, tăng khả năng tập trung sâu.',
+    title: 'Cai nghiện smartphone & tập trung sâu',
+    desc: 'Theo dõi thời gian trên màn hình đồng hồ ESP32 độc lập. Tính năng Digital Wellbeing ghi nhận số lần mở khóa điện thoại để triệt tiêu xao nhãng.',
   },
   {
     num: '03',
-    title: 'Mã nguồn mở hoàn toàn',
-    desc: 'Firmware Arduino/ESP32 mở hoàn toàn. Tự tùy biến giao diện màn hình, âm thanh thông báo và logic Pomodoro theo ý muốn.',
+    title: 'Trợ lý AI Gemini 2.5 & BRIX Detector',
+    desc: 'Phân tích dữ liệu học tập cá nhân, cảnh báo nguy cơ kiệt sức (Burnout BRIX) và đồng hành đưa ra lời khuyên khoa học.',
   },
   {
     num: '04',
-    title: 'Handmade · Độc bản',
-    desc: 'Mỗi chiếc được in 3D và lắp ráp thủ công tại Việt Nam. Bạn không chỉ mua sản phẩm — bạn ủng hộ một maker community.',
+    title: 'Không gian âm thanh thư giãn A2DP Lo-Fi',
+    desc: 'Tận hưởng âm thanh Lo-Fi, White Noise chất lượng cao phát trực tiếp từ điện thoại sang loa ngoài đồng hồ qua kết nối Bluetooth I2S.',
   },
 ]
 
@@ -32,12 +32,12 @@ export default function Benefits() {
           {/* Left: Image */}
           <div className="benefits__img-col">
             <div className="benefits__img-wrap">
-              <img src={productLifestyle} alt="Smart Pomodoro on desk" className="benefits__img" />
+              <img src={smartclockAiLifestyle} alt="SmartClock AI trên bàn học" className="benefits__img" />
               <div className="benefits__img-chip">
                 <span className="benefits__chip-icon">⭐</span>
                 <div>
-                  <div className="benefits__chip-score">4.9 / 5.0</div>
-                  <div className="benefits__chip-sub">Đánh giá từ cộng đồng maker</div>
+                  <div className="benefits__chip-score">4.95 / 5.0</div>
+                  <div className="benefits__chip-sub">Hệ sinh thái AI & Smartwatch EXE401</div>
                 </div>
               </div>
             </div>
@@ -45,13 +45,13 @@ export default function Benefits() {
 
           {/* Right: Benefits list */}
           <div className="benefits__list-col">
-            <p className="eyebrow">Lợi Ích</p>
+            <p className="eyebrow">LỢI ÍCH ĐỘT PHÁ</p>
             <h2 className="display-md benefits__title">
               Tại sao chọn<br />Smart Pomodoro?
             </h2>
             <p className="body-md benefits__sub">
-              Không chỉ là loa. Không chỉ là đồng hồ. 
-              Smart Pomodoro là người bạn đồng hành năng suất.
+              Không chỉ là đồng hồ. Không chỉ là ứng dụng. 
+              Đây là hệ sinh thái công nghệ toàn diện giúp bạn kiến tạo thói quen kỷ luật và làm việc đỉnh cao.
             </p>
 
             <ul className="benefits__list">

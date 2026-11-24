@@ -1,16 +1,16 @@
 import './About.css'
 
 const milestones = [
-  { year: '2025', text: 'Ý tưởng Smart Pomodoro ra đời trong phòng trọ sinh viên tại TP.HCM.' },
-  { year: '2025', text: 'Prototype v1 hoàn thiện — in 3D, hàn tay, flash firmware ESP32 đầu tiên.' },
-  { year: '2026', text: 'Ra mắt cộng đồng maker Việt Nam, nhận 200+ đơn đặt hàng đầu tiên.' },
-  { year: '2026', text: 'Phiên bản v2 với màn hình TFT màu, loa đôi cải tiến và firmware mới.' },
+  { year: '2025', text: 'Ý tưởng khởi nguồn từ đồ án nghiên cứu giải pháp nâng cao tính kỷ luật học tập cho sinh viên.' },
+  { year: '2025', text: 'Chế tạo thành công nguyên mẫu phần cứng ESP32 tích hợp màn hình TFT cảm ứng và loa ngoài I2S.' },
+  { year: '2026', text: 'Phát triển ứng dụng Flutter App và hệ thống thi đua năng suất nhóm với công thức điểm PRS.' },
+  { year: '10/2026', text: 'Tích hợp Trợ lý AI Google Gemini 2.5 Flash & ra mắt chính thức hệ sinh thái SmartClock (EXE401).' },
 ]
 
 const values = [
-  { icon: '🛠️', label: 'Made by Makers', desc: 'Mỗi sản phẩm được in 3D và lắp ráp thủ công bởi đội ngũ kỹ sư trẻ Việt Nam.' },
-  { icon: '📖', label: 'Open Source', desc: 'Firmware Arduino/ESP32 mở hoàn toàn. Fork, sửa và đóng góp trên GitHub.' },
-  { icon: '🌱', label: 'Community First', desc: 'Xây dựng cùng cộng đồng maker — mọi feedback đều trở thành tính năng mới.' },
+  { icon: '🛠️', label: 'Tâm Huyết Kỹ Sư Trẻ', desc: 'Sản phẩm được phát triển và tối ưu bởi đội ngũ sinh viên đam mê công nghệ nhúng IoT và trí tuệ nhân tạo.' },
+  { icon: '🧠', label: 'Trí Tuệ Nhân Tạo AI', desc: 'Ứng dụng mô hình LLM tiên tiến nhất giúp phân tích dữ liệu học tập và bảo vệ sức khỏe tinh thần (chống Burnout).' },
+  { icon: '🤝', label: 'Gắn Kết & Kỷ Luật', desc: 'Xây dựng môi trường học tập thi đua lành mạnh, biến áp lực bài vở thành động lực bứt phá mỗi ngày.' },
 ]
 
 export default function About() {
@@ -18,15 +18,14 @@ export default function About() {
     <section id="about" className="section about section-dark">
       <div className="container">
         <div className="about__intro text-center">
-          <p className="eyebrow-dark">Về Chúng Tôi</p>
+          <p className="eyebrow-dark">VỀ DỰ ÁN EXE401</p>
           <h2 className="display-md about__title">
-            Làm bởi maker.<br />Dành cho mọi người.
+            Giải Pháp Năng Suất Đột Phá.<br />Kiến Tạo Thế Hệ Kỷ Luật.
           </h2>
           <p className="about__desc body-lg">
-            Smart Pomodoro bắt đầu như một dự án cá nhân — một chiếc loa thông minh
-            tích hợp timer Pomodoro để giúp người làm việc tại nhà tập trung hơn.
-            Hôm nay, nó là sản phẩm handmade được hàng trăm người tin dùng
-            và là biểu tượng của maker culture Việt Nam.
+            <strong>SmartClock</strong> là dự án khởi nghiệp công nghệ thuộc môn học EXE401,
+            nhằm giải quyết triệt để vấn đề xao nhãng vì điện thoại thông minh và thiếu động lực tự học của học sinh, sinh viên.
+            Chúng tôi kết hợp sức mạnh của thiết bị phần cứng IoT thông minh, ứng dụng di động tiện ích và Trí tuệ Nhân tạo thế hệ mới.
           </p>
         </div>
 

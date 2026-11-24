@@ -1,0 +1,126 @@
+/* ══════════════════════════════════════════════════════════
+   FLOATING ACTION BUTTONS & BACK TO TOP
+   ══════════════════════════════════════════════════════════ */
+
+.floating-actions {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-actions--visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.floating-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(18, 18, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text-primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  padding: 0;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--cyan);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.floating-btn--chat {
+  background: linear-gradient(135deg, #0084ff 0%, #a855f7 100%);
+  color: #fff;
+  border: none;
+}
+
+.floating-btn--chat:hover {
+  box-shadow: 0 10px 30px rgba(0, 132, 255, 0.45);
+}
+
+.floating-tooltip {
+  position: absolute;
+  right: 58px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid var(--border);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transition: all 0.2s ease;
+}
+
+.floating-btn--chat:hover .floating-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Progress ring on Back to Top */
+.floating-progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.floating-progress-track {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.floating-progress-bar {
+  stroke: var(--cyan);
+  transition: stroke-dashoffset 0.1s ease;
+  stroke-linecap: round;
+}
+
+.floating-arrow {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.floating-btn--top:hover .floating-arrow {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-btn {
+    width: 42px;
+    height: 42px;
+  }
+  .floating-progress-ring {
+    width: 42px;
+    height: 42px;
+  }
+}

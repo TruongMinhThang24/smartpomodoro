@@ -1,0 +1,256 @@
+.competition {
+  background: radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+              #0c1017;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.competition__header {
+  margin-bottom: 60px;
+}
+
+.competition__title {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.competition__sub {
+  color: #94a3b8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.competition__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.competition__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-card__tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.comp-card__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.comp-card__desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* Formula Box */
+.prs-formula-box {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px dashed rgba(251, 191, 36, 0.5);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.prs-formula-box code {
+  font-size: 12.5px;
+  color: #fde68a;
+  display: block;
+  word-break: break-all;
+}
+
+/* Simulator controls */
+.prs-simulator {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.prs-sim__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.sim-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sim-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.sim-val {
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.text-green {
+  color: #34d399 !important;
+}
+
+.text-red {
+  color: #f87171 !important;
+}
+
+.sim-slider {
+  width: 100%;
+  accent-color: #fbbf24;
+  cursor: pointer;
+}
+
+.sim-result-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.25) 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.sim-result-card span {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fef3c7;
+}
+
+.sim-total-prs {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #fbbf24 !important;
+  letter-spacing: 0.5px;
+}
+
+/* Leaderboard Tab */
+.comp-filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.comp-filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.comp-filter-btn.active, .comp-filter-btn:hover {
+  background: #fbbf24;
+  color: #0f172a;
+  border-color: #fbbf24;
+}
+
+.comp-ranks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.comp-rank-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: transform 0.2s;
+}
+
+.comp-rank-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.comp-rank-item--gold {
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.comp-rank-item--silver {
+  border-color: rgba(203, 213, 225, 0.3);
+}
+
+.comp-rank-item--bronze {
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.comp-medal {
+  font-size: 16px;
+  font-weight: 800;
+  width: 28px;
+  text-align: center;
+}
+
+.comp-user-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.comp-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.comp-stats {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.comp-score {
+  font-size: 15px;
+  font-weight: 900;
+  color: #38bdf8;
+}
+
+.comp-room-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comp-room-info strong {
+  color: #cbd5e1;
+}
+
+@media (max-width: 900px) {
+  .competition__grid {
+    grid-template-columns: 1fr;
+  }
+}
+

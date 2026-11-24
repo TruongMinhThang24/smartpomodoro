@@ -1,9 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Contact.css'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', interest: 'purchase' })
   const [sent, setSent] = useState(false)
+  const [copiedEmail, setCopiedEmail] = useState(false)
+
+  useEffect(() => {
+    const onSelectProduct = (e) => {
+      if (e.detail) {
+        setForm((prev) => ({ ...prev, interest: e.detail }))
+        setSent(false)
+      }
+    }
+    window.addEventListener('smartpomo:select-product', onSelectProduct)
+    return () => window.removeEventListener('smartpomo:select-product', onSelectProduct)
+  }, [])
+
+  const copyEmail = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    navigator.clipboard?.writeText('support_smsp@smartclock.id.vn')
+    setCopiedEmail(true)
+    setTimeout(() => setCopiedEmail(false), 2000)
+  }
 
   const handleChange = e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   const handleSubmit = e => {
@@ -17,22 +37,28 @@ export default function Contact() {
         <div className="contact__split">
           {/* Left info */}
           <div className="contact__info">
-            <p className="eyebrow">Liên Hệ</p>
+            <p className="eyebrow">LIÊN HỆ & ĐẶT HÀNG</p>
             <h2 className="display-md contact__title">
-              Đặt hàng.<br />Cùng làm cộng đồng.
+              Đặt hàng ngay.<br />Trải nghiệm hệ sinh thái.
             </h2>
             <p className="body-md contact__sub">
-              Đặt hàng Smart Pomodoro, hỏi về firmware, tham gia cộng đồng maker
-              hoặc đề xuất tính năng mới — chúng tôi luôn lắng nghe.
+              Đặt mua thiết bị <strong>SmartClock AI</strong> hoặc <strong>SmartClock Mini E-ink</strong> từ <strong>Smart Pomodoro</strong>, trải nghiệm ứng dụng Flutter hoặc nhận tư vấn trực tiếp từ nhóm phát triển!
             </p>
 
             <div className="contact__channels">
-              <a href="mailto:hello@smartpomodoro.vn" className="contact__channel">
+              <a href="mailto:support_smsp@smartclock.id.vn" className="contact__channel contact__channel--email">
                 <span className="contact__channel-icon">✉️</span>
-                <div>
-                  <div className="contact__channel-label">Email</div>
+                <div className="contact__channel-meta">
+                  <div className="contact__channel-label">Email hỗ trợ & đặt hàng</div>
                   <div className="contact__channel-value">support_smsp@smartclock.id.vn</div>
                 </div>
+                <button
+                  type="button"
+                  className={`contact__copy-btn ${copiedEmail ? 'copied' : ''}`}
+                  onClick={copyEmail}
+                >
+                  {copiedEmail ? '✓ Đã chép' : 'Sao chép'}
+                </button>
               </a>
               <a href="https://www.facebook.com/share/1BKpFDM9oK/?mibextid=wwXIfr" target="_blank" rel="noopener" className="contact__channel">
                 <span className="contact__channel-icon">
@@ -57,6 +83,12 @@ export default function Contact() {
                 </div>
               </a>
             </div>
+
+            <div className="contact__guarantees">
+              <div className="contact__guarantee-item"><span>✓</span> Tư vấn trực tiếp 1-1 cùng nhóm Maker</div>
+              <div className="contact__guarantee-item"><span>✓</span> Hỗ trợ trải nghiệm demo thực tế tại Cần Thơ & Online</div>
+              <div className="contact__guarantee-item"><span>✓</span> Cập nhật phần mềm & Firmware OTA miễn phí</div>
+            </div>
           </div>
 
           {/* Right form */}
@@ -65,8 +97,8 @@ export default function Contact() {
               <div className="contact__success">
                 <span className="contact__success-icon">✅</span>
                 <h3>Cảm ơn bạn!</h3>
-                <p>Chúng tôi sẽ liên hệ trong vòng 24 giờ làm việc.</p>
-                <button className="btn-ghost" onClick={() => setSent(false)}>Gửi thêm</button>
+                <p>Chúng tôi đã nhận được thông tin và sẽ liên hệ hỗ trợ bạn sớm nhất.</p>
+                <button className="btn-ghost" onClick={() => setSent(false)}>Gửi thêm thông tin</button>
               </div>
             ) : (
               <form className="contact__form" onSubmit={handleSubmit}>
@@ -108,12 +140,14 @@ export default function Contact() {
                   />
                 </div>
                 <div className="contact__field">
-                  <label htmlFor="cf-interest">Quan tâm đến</label>
+                  <label htmlFor="cf-interest">Nhu cầu của bạn</label>
                   <select id="cf-interest" name="interest" value={form.interest} onChange={handleChange}>
-                    <option value="purchase">Mua sản phẩm</option>
-                    <option value="enterprise">Giá doanh nghiệp</option>
-                    <option value="demo">Xem demo</option>
-                    <option value="other">Khác</option>
+                    <option value="purchase">Đặt mua SmartClock AI (Bản Loa TFT)</option>
+                    <option value="eink">Đặt mua SmartClock Mini (Màn giấy điện tử E-ink)</option>
+                    <option value="app">Tải & dùng thử Flutter Mobile App</option>
+                    <option value="group">Mua theo nhóm học tập / Doanh nghiệp</option>
+                    <option value="demo">Xem trực tiếp sản phẩm</option>
+                    <option value="other">Hợp tác khác</option>
                   </select>
                 </div>
                 <div className="contact__field">
@@ -122,12 +156,12 @@ export default function Contact() {
                     id="cf-message"
                     name="message"
                     rows="4"
-                    placeholder="Cho chúng tôi biết bạn cần gì..."
+                    placeholder="Hãy để lại lời nhắn hoặc câu hỏi của bạn..."
                     value={form.message}
                     onChange={handleChange}
                   />
                 </div>
-                <button type="submit" className="btn-primary contact__submit">Gửi tin nhắn →</button>
+                <button type="submit" className="btn-primary contact__submit">Gửi thông tin liên hệ →</button>
               </form>
             )}
           </div>

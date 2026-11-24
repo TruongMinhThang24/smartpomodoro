@@ -1,10 +1,10 @@
 import './Team.css'
 import thuyAnhImg from '../assets/THUYANH.jpg'
 import thangImg from '../assets/THANG.jpg'
-import tranImg from '../assets/TRAN.jpg'
 import trieuvyImg from '../assets/TRIEUVY.jpg'
 import baoImg from '../assets/BAO.jpg'
-import Manocanh from '../assets/Manocanh.jpg'
+import huynhNhuImg from '../assets/HUYNHNHU.jpg'
+import teamGroupImg from '../assets/activity_team_1.jpg'
 
 const team = [
   {
@@ -12,23 +12,19 @@ const team = [
     avatar: thuyAnhImg,
   },
   {
-    name: 'Bùi Thị Huyền Trân',
-    avatar: tranImg,
-  },
-  {
     name: 'Lê Triệu Vy',
     avatar: trieuvyImg,
   },
   {
     name: 'Nguyễn Thị Huỳnh Như',
-    avatar: Manocanh,
+    avatar: huynhNhuImg,
   },
   {
     name: 'Trương Minh Thắng',
     avatar: thangImg,
   },
   {
-    name: 'Vương Chí Bảo',
+    name: 'Vòng Chí Bảo',
     avatar: baoImg,
   },
 ]
@@ -38,13 +34,13 @@ export default function Team() {
     <section id="team" className="section team">
       <div className="container">
         <header className="team__header text-center">
-          <p className="eyebrow">Nhóm Của Chúng Tôi</p>
+          <p className="eyebrow">Đội Ngũ Maker</p>
           <h2 className="display-md team__title">
-            6 người. 1 đam mê.<br />Vô số mã nguồn.
+            5 thành viên. 1 đam mê.<br />Vô số mã nguồn.
           </h2>
           <p className="body-lg team__sub">
-            Đội ngũ maker trẻ Việt Nam xây dựng Smart Pomodoro từ đam mê
-            với phần cứng, phần mềm và cộng đồng công nghệ mở.
+            Đội ngũ kỹ sư trẻ phát triển hệ sinh thái Smart Pomodoro từ đam mê
+            với phần cứng IoT, ứng dụng di động Flutter và trí tuệ nhân tạo Gemini.
           </p>
         </header>
 
@@ -57,6 +53,27 @@ export default function Team() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Group Photo Showcase */}
+        <div className="team__group-banner">
+          <div className="team__group-imgwrap">
+            <img
+              src={teamGroupImg}
+              alt="Đội ngũ SmartClock cùng Giảng viên Hướng dẫn tại Đại học FPT"
+              className="team__group-img"
+              loading="lazy"
+            />
+          </div>
+          <div className="team__group-caption">
+            <span className="team__group-badge">FPT UNIVERSITY CẦN THƠ</span>
+            <h4 className="team__group-title">
+              Đội Ngũ Phát Triển Smart Pomodoro Cùng Giảng Viên Hướng Dẫn
+            </h4>
+            <p className="team__group-desc">
+              Hình ảnh thực tế của nhóm tại sự kiện trưng bày và trải nghiệm sản phẩm. Với tinh thần học hỏi và không ngừng cải tiến, nhóm cam kết tiếp tục hoàn thiện cả 2 dòng sản phẩm SmartClock AI và SmartClock Mini E-ink để mang lại trải nghiệm tốt nhất cho người dùng.
+            </p>
+          </div>
         </div>
       </div>
     </section>

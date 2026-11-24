@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
+import smartclockAiReal from '../assets/smartclock_ai_real.jpg'
+import einkRed from '../assets/pomo_eink_red.jpg'
 import v1Img from '../assets/v1_product.png'
 import v2Img from '../assets/product_hero.png'
-import v3Img from '../assets/v3_product.png'
 import './Evolution.css'
 
 const versions = [
@@ -18,27 +19,37 @@ const versions = [
   {
     tag: 'v2.0',
     year: '2025',
-    name: 'Smart Pomodoro',
+    name: 'Smart Pomodoro Speaker',
     subtitle: 'TFT LCD · Dual Speaker · Rotary',
-    desc: 'Nâng cấp toàn diện: hộp chữ nhật, 2 loa tròn dot-pattern, màn hình TFT màu hiển thị đồng hồ/lịch/thời tiết và 4 núm rotary encoder.',
+    desc: 'Nâng cấp toàn diện: hộp để bàn, 2 loa tròn dot-pattern, màn hình TFT màu hiển thị đồng hồ/lịch/thời tiết và núm vặn rotary encoder.',
     img: v2Img,
-    highlights: ['Màn hình TFT màu', '2× loa full-range', '4 núm Rotary', 'USB-C + Pin 12h'],
+    highlights: ['Màn hình TFT màu', 'Loa kép Stereo', 'Vỏ in 3D thẩm mỹ', 'USB-C + Pin nội'],
     accent: '#00d4ff',
   },
   {
     tag: 'v3.0',
     year: '2026',
-    name: 'Mini Pomodoro Fleet',
-    subtitle: 'E-ink · Mass Production',
-    desc: 'Phiên bản nhỏ gọn dạng module, màn hình e-ink monochrome, sản xuất hàng loạt. Trắng, đen và đỏ — phù hợp bàn làm việc hoặc tặng quà.',
-    img: v3Img,
-    highlights: ['E-ink display', 'Trắng / Đen / Đỏ', 'Siêu mỏng & nhẹ', 'Sản xuất hàng loạt'],
+    name: 'SmartClock Mini (E-ink)',
+    subtitle: 'Quả Cà Chua · Giấy Điện Tử E-ink',
+    desc: 'Phiên bản nhỏ gọn hình quả cà chua với núm vặn cuống lá xanh, màn hình e-ink monochrome 2.13", điều khiển qua app POMO mini ANH 100% Offline.',
+    img: einkRed,
+    highlights: ['Thiết kế quả cà chua', 'Núm cuống lá xanh', 'Màn E-ink 2.13 inch', 'App POMO mini ANH'],
     accent: '#a855f7',
+  },
+  {
+    tag: 'v4.0 (Hiện Tại)',
+    year: '10/2026',
+    name: 'SmartClock AI & Mini Ecosystem',
+    subtitle: 'ESP32 Smart Clock + Flutter App + Gemini AI',
+    desc: 'Cột mốc hoàn thiện toàn diện: Hệ sinh thái IoT đồng bộ 3 trụ cột kết nối không dây Bluetooth SPP/A2DP, thi đua năng suất nhóm với công thức điểm PRS, Trợ lý ảo Gemini 2.5 Flash và Digital Wellbeing chống xao nhãng.',
+    img: smartclockAiReal,
+    highlights: ['Đồng hồ AI ESP32 thật', 'Loa Bluetooth A2DP Lo-Fi', 'Thi đua xếp hạng PRS', 'Trợ lý AI Gemini 2.5 Coach'],
+    accent: '#10b981',
   },
 ]
 
 export default function Evolution() {
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(3) // Mặc định mở phiên bản mới nhất v4.0
   const trackRef = useRef(null)
   const startX = useRef(0)
   const currentX = useRef(0)
@@ -90,12 +101,12 @@ export default function Evolution() {
     <section id="evolution" className="section evo">
       <div className="container">
         <header className="evo__header text-center">
-          <p className="eyebrow">Hành Trình Sản Phẩm</p>
+          <p className="eyebrow">Hành Trình Đổi Mới</p>
           <h2 className="display-md evo__title">
-            Từ ý tưởng đến<br />sản phẩm thế giới.
+            Từ Prototype Đơn Sơ Đến<br />Hệ Sinh Thái AI Toàn Diện.
           </h2>
           <p className="body-lg evo__sub">
-            Vuốt trái/phải để xem hành trình 3 thế hệ Smart Pomodoro.
+            Vuốt để khám phá 4 thế hệ phát triển của dự án Smart Pomodoro.
           </p>
         </header>
 

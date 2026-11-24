@@ -45,6 +45,10 @@ a.contact__channel:hover {
   background: var(--surface-2);
   transform: translateX(4px);
 }
+.contact__channel-meta {
+  flex: 1;
+  min-width: 0;
+}
 .contact__channel-icon { font-size: 20px; flex-shrink: 0; }
 .contact__channel-label {
   font-size: 10px;
@@ -58,6 +62,50 @@ a.contact__channel:hover {
   font-size: 14px;
   font-weight: 500;
   color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contact__copy-btn {
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--cyan);
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.28);
+  border-radius: 999px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.contact__copy-btn:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: var(--cyan);
+}
+.contact__copy-btn.copied {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+.contact__guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  background: rgba(0, 212, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.16);
+  border-radius: var(--radius-md);
+}
+.contact__guarantee-item {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact__guarantee-item span {
+  color: var(--cyan);
+  font-weight: 800;
 }
 
 /* Form */

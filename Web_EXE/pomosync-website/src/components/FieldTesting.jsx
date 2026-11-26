@@ -146,7 +146,7 @@ export default function FieldTesting() {
             <span>Hoạt Động Trải Nghiệm Thực Tế</span>
           </div>
           <h2 className="display-md field-testing__title">
-            Smart Pomodoro Tại Gian Hàng Trải Nghiệm<br />
+            SmartPomodoro Tại Gian Hàng Trải Nghiệm<br />
             <span className="field-testing__highlight">Đại Học FPT Cần Thơ</span>
           </h2>
           <p className="body-lg field-testing__sub">

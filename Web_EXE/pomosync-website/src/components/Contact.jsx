@@ -42,7 +42,7 @@ export default function Contact() {
               Đặt hàng ngay.<br />Trải nghiệm hệ sinh thái.
             </h2>
             <p className="body-md contact__sub">
-              Đặt mua thiết bị <strong>SmartClock AI</strong> hoặc <strong>SmartClock Mini E-ink</strong> từ <strong>Smart Pomodoro</strong>, trải nghiệm ứng dụng Flutter hoặc nhận tư vấn trực tiếp từ nhóm phát triển!
+              Đặt mua thiết bị <strong>SmartClock AI</strong> hoặc <strong>SmartClock Mini E-ink</strong> từ <strong>SmartPomodoro</strong>, trải nghiệm ứng dụng Flutter hoặc nhận tư vấn trực tiếp từ nhóm phát triển!
             </p>
 
             <div className="contact__channels">

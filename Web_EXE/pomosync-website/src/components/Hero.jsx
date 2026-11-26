@@ -122,7 +122,7 @@ export default function Hero({ heroRef }) {
           <div className="hero__top-badges animate-fadeUp delay-1">
             <div className="hero__kicker">
               <span className="hero__kicker-dot" />
-              <p className="eyebrow">HỆ SINH THÁI SMART POMODORO • ESP32 + FLUTTER + AI</p>
+              <p className="eyebrow">HỆ SINH THÁI SMARTPOMODORO • ESP32 + FLUTTER + AI</p>
             </div>
             <a href="#experience" className="hero__proof-pill">
               <span className="hero__proof-stars">★ 4.95/5</span>
@@ -144,7 +144,7 @@ export default function Hero({ heroRef }) {
           </div>
 
           <p className="body-lg hero__sub animate-fadeUp delay-3">
-            <strong>Smart Pomodoro</strong> kết hợp đồng hồ phần cứng <strong>SmartClock AI</strong>, 
+            <strong>SmartPomodoro</strong> (Smart Pomodoro) kết hợp đồng hồ phần cứng <strong>SmartClock AI</strong>, 
             bản bỏ túi <strong>Mini E-ink</strong>, ứng dụng Flutter và Trợ lý AI Gemini — 
             giải pháp toàn diện giúp rèn kỷ luật số và thi đua năng suất cùng bạn bè.
           </p>

@@ -17,7 +17,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="footer__tagline">
-            SmartPomodoro — Hệ sinh thái đồng hồ thông minh SmartClock AI &amp; SmartClock Mini (Dự án EXE401). 
+            Smart Pomodoro — Hệ sinh thái đồng hồ thông minh SmartClock AI &amp; SmartClock Mini (Dự án EXE401). 
             Tập trung sâu hơn. Làm việc thông minh hơn.
           </p>
           <div className="footer__socials">
@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom container-wide">
-        <p>© 2026 SmartPomodoro · Dự Án EXE401 · Made with ❤️ in Vietnam</p>
+        <p>© 2026 Smart Pomodoro · Dự Án EXE401 · Made with ❤️ in Vietnam</p>
         <div className="footer__bottom-links">
           <a href="#">Chính sách bảo mật</a>
           <a href="#">Điều khoản sử dụng</a>

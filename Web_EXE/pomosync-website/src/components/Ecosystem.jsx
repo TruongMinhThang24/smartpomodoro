@@ -52,7 +52,7 @@ export default function Ecosystem() {
             Phần Cứng • Ứng Dụng • Trí Tuệ AI
           </h2>
           <p className="ecosystem__sub body-lg">
-            Khác biệt hoàn toàn với những chiếc đồng hồ thông thường, <strong>SmartPomodoro</strong> là 
+            Khác biệt hoàn toàn với những chiếc đồng hồ thông thường, <strong>Smart Pomodoro</strong> là 
             một hệ sinh thái công nghệ toàn diện kết hợp chặt chẽ giữa thiết bị IoT, ứng dụng di động và trí tuệ nhân tạo.
           </p>
         </header>

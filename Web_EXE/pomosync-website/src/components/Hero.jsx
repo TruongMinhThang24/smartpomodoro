@@ -144,7 +144,7 @@ export default function Hero({ heroRef }) {
           </div>
 
           <p className="body-lg hero__sub animate-fadeUp delay-3">
-            <strong>SmartPomodoro</strong> (Smart Pomodoro) kết hợp đồng hồ phần cứng <strong>SmartClock AI</strong>, 
+            <strong>Smart Pomodoro</strong> kết hợp đồng hồ phần cứng <strong>SmartClock AI</strong>, 
             bản bỏ túi <strong>Mini E-ink</strong>, ứng dụng Flutter và Trợ lý AI Gemini — 
             giải pháp toàn diện giúp rèn kỷ luật số và thi đua năng suất cùng bạn bè.
           </p>
